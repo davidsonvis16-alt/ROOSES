@@ -1,0 +1,6 @@
+{
+  "name": "Liebe & Roses",
+  "description": "Luxury floral brand and studio featuring bespoke floral creations, seasonal collections, and artisanal bouquets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
