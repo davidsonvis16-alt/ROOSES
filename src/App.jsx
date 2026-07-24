@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ShopProvider, useShop } from './context/ShopContext';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
-import { MobileBottomNav } from './components/layout/MobileBottomNav';
 import { Home } from './pages/Home';
 import { Shop } from './pages/Shop';
 import { About } from './pages/About';
@@ -124,7 +123,7 @@ export default function App() {
     <ShopProvider>
       <HashRouter>
         <ScrollToTop />
-        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', paddingTop: '64px' }}>
+        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
           <Header />
           <main style={{ flex: 1, position: 'relative' }}>
             <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
@@ -139,8 +138,6 @@ export default function App() {
           <SearchModal />
           <ToastNotification />
 
-          {/* Mobile Bottom Navigation */}
-          <MobileBottomNav />
         </div>
       </HashRouter>
     </ShopProvider>
