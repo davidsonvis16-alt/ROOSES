@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light" />
+  <title>LIEBE & ROSES | Luxury Florist </title>
+  
+  <!-- Typography Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Syne:wght@400;500;700;800&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       LIEBE & ROSES - Handcrafted Pure CSS
+       ========================================================================== */
+    @font-face {
+      font-family: 'Equinox';
+      src: local('Equinox'), local('Cinzel Decorative'), local('Cinzel');
+      font-display: swap;
+    }
+
+    :root {
+      color-scheme: light;
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #FAFAFA;
+      --bg-card: #FFFFFF;
+      --bg-warm: #F5F3EF;
+      --text-primary: #1A1A1A;
+      --text-secondary: #6B6B6B;
+      --accent-sage: #6B8E62;
+      --border-light: #E8E8E8;
+      --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.03);
+      --shadow-modal: 0 12px 36px rgba(0, 0, 0, 0.08);
+
+      --font-serif: 'Equinox', 'Cinzel', 'Syne', 'Playfair Display', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+      --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      --radius-sm: 4px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      color-scheme: light;
+      font-family: var(--font-sans);
+      font-size: 16px;
+      color: var(--text-primary);
+      background-color: var(--bg-primary);
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      color-scheme: light;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      line-height: 1.6;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+      outline: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    input, textarea, select {
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+
+    /* Container & Layout */
+    .page-container {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 768px) {
+      .page-container { padding: 0 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      .page-container { padding: 0 0.875rem; }
+    }
+
+    .section-spacing {
+      padding: 6rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .section-spacing { padding: 3rem 0; }
+    }
+
+    @media (max-width: 480px) {
+      .section-spacing { padding: 2rem 0; }
+    }
+
+    /* Typography */
+    .font-serif { font-family: var(--font-serif); }
+
+    .heading-xl {
+      font-family: var(--font-serif);
+      font-size: 3.75rem;
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .heading-lg {
+      font-family: var(--font-serif);
+      font-size: 2.75rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .heading-md {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.25;
+    }
+
+    .heading-sm {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 400;
+    }
+
+    .text-subhead {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .text-meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .badge-sage {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background-color: var(--bg-warm);
+      color: var(--accent-sage);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+    }
+
+    @media (max-width: 768px) {
+      .heading-xl { font-size: 2.25rem; }
+      .heading-lg { font-size: 1.85rem; }
+      .heading-md { font-size: 1.5rem; }
+      .text-subhead { font-size: 1rem; }
+    }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 2.25rem;
+      background-color: var(--text-primary);
+      color: #FFFFFF;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-radius: var(--radius-sm);
+      transition: var(--transition-smooth);
+      border: 1px solid var(--text-primary);
+      white-space: nowrap;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-sage);
+      border-color: var(--accent-sage);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 2.25rem;
+      background-color: transparent;
+      color: var(--text-primary);
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-radius: var(--radius-sm);
+      transition: var(--transition-smooth);
+      border: 1px solid var(--text-primary);
+      white-space: nowrap;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--bg-warm);
+      transform: translateY(-2px);
+    }
+
+    .btn-text {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-primary);
+      border-bottom: 1px solid var(--text-primary);
+      padding-bottom: 0.25rem;
+    }
+
+    .btn-text:hover {
+      color: var(--accent-sage);
+      border-color: var(--accent-sage);
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    @media (max-width: 768px) {
+      .header-inner {
+        height: auto;
+        padding: 0.875rem 0;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      .brand-logo {
+        font-size: 1.25rem;
+      }
+      .nav-links {
+        display: flex;
+        gap: 1rem;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        border-top: 1px solid var(--border-light);
+        padding-top: 0.5rem;
+        margin-top: 0.25rem;
+      }
+      .nav-link {
+        font-size: 0.75rem;
+        padding: 0.25rem 0;
+      }
+    }
+
+    .brand-logo {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      position: relative;
+      padding: 0.5rem 0;
+      cursor: pointer;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--text-primary);
+      transition: var(--transition-smooth);
+    }
+
+    .nav-link.active::after,
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .icon-btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      transition: var(--transition-smooth);
+    }
+
+    .icon-btn:hover {
+      background-color: var(--bg-warm);
+      color: var(--accent-sage);
+    }
+
+    .cart-badge {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      background-color: var(--accent-sage);
+      color: #FFFFFF;
+      font-size: 0.65rem;
+      font-weight: 600;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Page Views Switcher */
+    .page-view {
+      display: none;
+    }
+
+    .page-view.active-view {
+      display: block;
+    }
+
+    /* Hero */
+    .hero-section {
+      padding: 4rem 0;
+      background-color: var(--bg-secondary);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-img-frame {
+      width: 100%;
+      aspect-ratio: 4/5;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: var(--shadow-subtle);
+      border: 1px solid var(--border-light);
+    }
+
+    .hero-img-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1.2s ease;
+    }
+
+    .hero-img-frame:hover img {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 992px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-buttons .btn-primary,
+      .hero-buttons .btn-secondary {
+        width: 100%;
+      }
+    }
+
+    /* Collections Grid */
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .collection-card {
+      background-color: var(--bg-secondary);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+
+    .collection-img-box {
+      aspect-ratio: 3/4;
+      overflow: hidden;
+    }
+
+    .collection-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+
+    .collection-card:hover .collection-img-box img {
+      transform: scale(1.05);
+    }
+
+    .collection-meta {
+      padding: 1.5rem;
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-top: none;
+    }
+
+    @media (max-width: 992px) {
+      .collection-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    }
+
+    @media (max-width: 640px) {
+      .collection-grid { grid-template-columns: 1fr; gap: 1.25rem; margin-top: 1.75rem; }
+    }
+
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      background: var(--bg-primary);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-light);
+      padding: 0.75rem;
+      transition: transform 0.2s ease-out, box-shadow 0.3s ease;
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+
+    .product-card:hover {
+      transform: perspective(1000px) rotateX(-3deg) rotateY(4deg) scale3d(1.02, 1.02, 1.02);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .product-img-box {
+      position: relative;
+      aspect-ratio: 4/5;
+      background-color: var(--bg-secondary);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+    }
+
+    .product-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+
+    .product-card:hover .product-img-box img {
+      transform: scale(1.04);
+    }
+
+    .quick-view-btn {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      background-color: rgba(255, 255, 255, 0.95);
+      color: var(--text-primary);
+      padding: 0.75rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+      text-align: center;
+      border-radius: var(--radius-sm);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: var(--transition-smooth);
+      border: 1px solid var(--border-light);
+    }
+
+    .product-card:hover .quick-view-btn {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .product-info {
+      padding-top: 1.25rem;
+    }
+
+    .product-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .product-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 400;
+    }
+
+    @media (max-width: 1200px) {
+      .product-grid { grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
+    }
+
+    @media (max-width: 868px) {
+      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    }
+
+    @media (max-width: 520px) {
+      .product-grid { grid-template-columns: 1fr; gap: 1.25rem; margin-top: 1.5rem; }
+    }
+
+    /* About & Contact Grids */
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+    }
+
+    @media (max-width: 868px) {
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    @media (max-width: 868px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    /* Modals & Cart Drawer */
+    .drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0,0,0,0.35);
+      backdrop-filter: blur(2px);
+      z-index: 200;
+      display: none;
+      justify-content: flex-end;
+    }
+
+    .drawer-overlay.active {
+      display: flex;
+    }
+
+    .drawer-box {
+      width: 100%;
+      max-width: 480px;
+      height: 100%;
+      background-color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      box-shadow: -8px 0 32px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 520px) {
+      .drawer-box { width: 100%; max-width: 100%; }
+    }
+
+    /* Form Controls */
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .form-label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .form-input, .form-textarea, .form-select {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      background-color: #FFFFFF;
+    }
+
+    .form-input:focus, .form-textarea:focus, .form-select:focus {
+      outline: none;
+      border-color: var(--text-primary);
+    }
+
+    .pill-btn {
+      padding: 0.6rem 1.25rem;
+      font-size: 0.825rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-radius: var(--radius-sm);
+      background-color: var(--bg-secondary);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-light);
+    }
+
+    .pill-btn.active, .pill-btn:hover {
+      background-color: var(--text-primary);
+      color: #FFFFFF;
+      border-color: var(--text-primary);
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: var(--bg-primary);
+      border-top: 1px solid var(--border-light);
+      padding: 5rem 0 3rem;
+      margin-top: auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    @media (max-width: 992px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+
+    @media (max-width: 520px) {
+      .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+
+    /* Toast */
+    #toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: var(--text-primary);
+      color: #FFFFFF;
+      padding: 1rem 1.75rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.875rem;
+      z-index: 300;
+      display: none;
+    }
+
+    /* Prevent Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: light !important;
+      }
+      html, body {
+        background-color: #FFFFFF !important;
+        color: #1A1A1A !important;
+      }
+      .site-header {
+        background-color: rgba(255, 255, 255, 0.96) !important;
+      }
+      .collection-card, .product-card, .hero-section, .drawer-box, .collection-meta {
+        background-color: #FFFFFF !important;
+        color: #1A1A1A !important;
+      }
+      .form-input, .form-textarea, .form-select {
+        background-color: #FFFFFF !important;
+        color: #1A1A1A !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" style="position: sticky; top:0; z-index:100; background:rgba(255,255,255,0.96); border-bottom:1px solid #E8E8E8;">
+    <div class="page-container">
+      <div class="header-inner">
+        <a href="#home" onclick="showView('home')" class="brand-logo">Liebe & Roses</a>
+
+        <nav>
+          <ul class="nav-links">
+            <li class="nav-link active" id="nav-home" onclick="showView('home')">Home</li>
+            <li class="nav-link" id="nav-shop" onclick="showView('shop')">Shop</li>
+            <li class="nav-link" id="nav-about" onclick="showView('about')">About</li>
+            <li class="nav-link" id="nav-contact" onclick="showView('contact')">Contact</li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn" onclick="openSearch()" aria-label="Search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </button>
+          <button class="icon-btn" onclick="toggleCart()" aria-label="Bag">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span class="cart-badge" id="cart-count-badge">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= PAGE 1: HOME ================= -->
+  <main id="view-home" class="page-view active-view">
+    <section class="hero-section">
+      <div class="page-container">
+        <div class="hero-grid">
+          <div>
+            <span class="badge-sage" style="margin-bottom:1.25rem;">Atelier Floristry • Berlin & Paris</span>
+            <h1 class="heading-xl" style="margin-bottom:1.5rem;">Sculpted by Nature. Defined by Craft.</h1>
+            <p class="text-subhead" style="margin-bottom:2rem;">
+              Liebe & Roses creates bespoke floral arrangements using fresh garden blooms sourced directly from sustainable European growers, conditioned in natural daylight.
+            </p>
+            <div class="hero-buttons">
+              <button class="btn-primary" onclick="showView('shop')">Explore Shop &rarr;</button>
+              <button class="btn-secondary" onclick="showView('about')">Our Craft</button>
+            </div>
+          </div>
+          <div style="width: 100%; border-radius: 12px; overflow: hidden; border: 1px solid #222222; background: #000000; position: relative; height: 480px; box-shadow: 0 12px 36px rgba(0,0,0,0.25);">
+            <canvas id="hero-galaxy-canvas" style="width: 100%; height: 100%; display: block;"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section class="section-spacing">
+      <div class="page-container">
+        <div style="text-align:center; max-width:640px; margin:0 auto 3.5rem;">
+          <span class="text-meta">Curated Portfolios</span>
+          <h2 class="heading-lg" style="margin-top:0.5rem;">Featured Collections</h2>
+          <p class="text-subhead" style="margin-top:0.75rem;">
+            Each collection embodies a distinct botanical mood, engineered with harmony and proportion.
+          </p>
+        </div>
+
+        <div class="collection-grid">
+          <div class="collection-card">
+            <div class="collection-img-box">
+              <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=1000&auto=format&fit=crop" alt="Monochromatic" />
+            </div>
+            <div class="collection-meta">
+              <span class="text-meta">Pure Harmony</span>
+              <h3 class="heading-sm" style="margin:0.25rem 0 0.5rem;">Monochromatic Botanicals</h3>
+              <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1.25rem;">Sculptural white garden compositions.</p>
+              <button class="btn-text" onclick="filterShop('Monochromatic')">Explore Collection &rarr;</button>
+            </div>
+          </div>
+
+          <div class="collection-card">
+            <div class="collection-img-box">
+              <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?q=80&w=1000&auto=format&fit=crop" alt="Signature" />
+            </div>
+            <div class="collection-meta">
+              <span class="text-meta">Atelier Masterpieces</span>
+              <h3 class="heading-sm" style="margin:0.25rem 0 0.5rem;">Signature Bouquets</h3>
+              <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1.25rem;">Abundant multi-layered garden peonies & roses.</p>
+              <button class="btn-text" onclick="filterShop('Signature Bouquets')">Explore Collection &rarr;</button>
+            </div>
+          </div>
+
+          <div class="collection-card">
+            <div class="collection-img-box">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2jfaRhBBxilnV3p6ruTDpla8Eh2CHZOOLedYMeju4Kg&s" alt="Vase" />
+            </div>
+            <div class="collection-meta">
+              <span class="text-meta">Living Sculpture</span>
+              <h3 class="heading-sm" style="margin:0.25rem 0 0.5rem;">Vase Arrangements</h3>
+              <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1.25rem;">Pre-arranged stems with crystal vessels.</p>
+              <button class="btn-text" onclick="filterShop('Vase Arrangements')">Explore Collection &rarr;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= PAGE 2: SHOP ================= -->
+  <main id="view-shop" class="page-view section-spacing">
+    <div class="page-container">
+      <div style="text-align:center; max-width:700px; margin:0 auto 3rem;">
+        <span class="text-meta">The Botanical Collection</span>
+        <h1 class="heading-lg" style="margin-top:0.5rem;">Artisanal Floral Creations</h1>
+        <p class="text-subhead" style="margin-top:0.5rem;">Hand-arranged daily using fresh European garden stems.</p>
+      </div>
+
+      <!-- Filters -->
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #E8E8E8; padding-bottom:1.5rem; margin-bottom:2.5rem; flex-wrap:wrap; gap:1rem;">
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+          <button class="pill-btn active" onclick="setCategoryFilter('All', this)">All</button>
+          <button class="pill-btn" onclick="setCategoryFilter('Signature Bouquets', this)">Signature Bouquets</button>
+          <button class="pill-btn" onclick="setCategoryFilter('Monochromatic', this)">Monochromatic</button>
+          <button class="pill-btn" onclick="setCategoryFilter('Seasonal Atelier', this)">Seasonal Atelier</button>
+          <button class="pill-btn" onclick="setCategoryFilter('Vase Arrangements', this)">Vase Arrangements</button>
+        </div>
+      </div>
+
+      <div class="product-grid" id="standalone-product-grid">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= PAGE 3: ABOUT ================= -->
+  <main id="view-about" class="page-view section-spacing">
+    <div class="page-container">
+      <div style="text-align:center; max-width:780px; margin:0 auto 4rem;">
+        <span class="text-meta">Our Heritage & Craft</span>
+        <h1 class="heading-xl" style="margin:0.75rem 0 1.5rem;">Rooted in nature. Elevated by hand.</h1>
+        <p class="text-subhead">
+          Liebe & Roses was born in Berlin from a simple desire: to honor the unadorned beauty of organic flora with architectural rigor and natural daylight care.
+        </p>
+      </div>
+
+      <div style="width:100%; aspect-ratio:21/9; border-radius:var(--radius-sm); overflow:hidden; border:1px solid #E8E8E8; margin-bottom:4rem;">
+        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=2000&auto=format&fit=crop" alt="Greenhouse" style="width:100%; height:100%; object-fit:cover;" />
+      </div>
+
+      <div class="about-grid">
+        <div>
+          <span class="text-meta">01 • Sustainable Harvest</span>
+          <h3 class="heading-sm" style="margin:0.5rem 0;">Direct Farm Sourcing</h3>
+          <p class="text-subhead" style="font-size:0.95rem;">We collaborate with small European flower farms practicing organic cultivation.</p>
+        </div>
+        <div>
+          <span class="text-meta">02 • Architectural Form</span>
+          <h3 class="heading-sm" style="margin:0.5rem 0;">Master Floristry</h3>
+          <p class="text-subhead" style="font-size:0.95rem;">Arranged to allow airflow, natural movement, and graceful petal unfurling.</p>
+        </div>
+        <div>
+          <span class="text-meta">03 • Natural Daylight</span>
+          <h3 class="heading-sm" style="margin:0.5rem 0;">No Artificial Lighting</h3>
+          <p class="text-subhead" style="font-size:0.95rem;">All compositions are created under skylights to preserve authentic color vibrancy.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= PAGE 4: CONTACT ================= -->
+  <main id="view-contact" class="page-view section-spacing">
+    <div class="page-container">
+      <div style="text-align:center; max-width:700px; margin:0 auto 3.5rem;">
+        <span class="text-meta">Atelier Concierge</span>
+        <h1 class="heading-lg" style="margin-top:0.5rem;">Connect with Our Florists</h1>
+        <p class="text-subhead" style="margin-top:0.5rem;">For bespoke commissions, weddings, or general inquiries.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div style="background-color:var(--bg-secondary); padding:2.5rem; border-radius:var(--radius-sm); border:1px solid #E8E8E8;">
+          <h3 class="heading-sm" style="margin-bottom:1.5rem;">Send a Message</h3>
+          <form onsubmit="handleContactSubmit(event)">
+            <div class="form-group">
+              <label class="form-label">Full Name *</label>
+              <input type="text" class="form-input" required placeholder="Victoria Sterling" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address *</label>
+              <input type="email" class="form-input" required placeholder="name@domain.com" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message *</label>
+              <textarea class="form-textarea" rows="4" required placeholder="Describe your floral inquiry..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%;">Submit Inquiry</button>
+          </form>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:2rem;">
+          <div style="padding:1.5rem; border:1px solid #E8E8E8; border-radius:var(--radius-sm);">
+            <h4 class="heading-sm" style="margin-bottom:0.75rem;">Berlin Flagship Studio</h4>
+            <p class="text-subhead" style="font-size:0.9rem;">Auguststraße 42, 10115 Berlin, Germany</p>
+            <p class="text-subhead" style="font-size:0.9rem;">Phone: +49 30 8920 4110</p>
+            <p class="text-subhead" style="font-size:0.9rem;">Email: concierge@liebeandroses.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="page-container">
+      <div class="footer-grid">
+        <div>
+          <a href="#home" onclick="showView('home')" class="brand-logo" style="display:block; margin-bottom:1rem;">Liebe & Roses</a>
+          <p class="text-subhead" style="font-size:0.875rem; max-width:300px;">Artisanal luxury floristry crafted with natural daylight stems.</p>
+        </div>
+        <div>
+          <h4 class="font-serif" style="margin-bottom:1rem;">Navigation</h4>
+          <p style="font-size:0.85rem; margin-bottom:0.5rem; cursor:pointer;" onclick="showView('home')">Home</p>
+          <p style="font-size:0.85rem; margin-bottom:0.5rem; cursor:pointer;" onclick="showView('shop')">Shop</p>
+          <p style="font-size:0.85rem; margin-bottom:0.5rem; cursor:pointer;" onclick="showView('about')">About</p>
+          <p style="font-size:0.85rem; margin-bottom:0.5rem; cursor:pointer;" onclick="showView('contact')">Contact</p>
+        </div>
+        <div>
+          <h4 class="font-serif" style="margin-bottom:1rem;">Atelier</h4>
+          <p style="font-size:0.85rem; color:var(--text-secondary);">Berlin • Paris</p>
+        </div>
+      </div>
+      <div style="padding-top:2rem; font-size:0.8rem; color:var(--text-secondary); display:flex; justify-content:space-between;">
+        <span>© 2026 LIEBE & ROSES. ALL RIGHTS RESERVED.</span>
+        <span>Designed by Eden</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= CART DRAWER ================= -->
+  <div class="drawer-overlay" id="cart-drawer">
+    <div class="drawer-box">
+      <div style="padding:1.5rem 2rem; border-bottom:1px solid #E8E8E8; display:flex; justify-content:space-between; align-items:center;">
+        <h3 class="heading-sm">Your Shopping Bag</h3>
+        <button onclick="toggleCart()" style="font-size:1.25rem;">✕</button>
+      </div>
+      <div style="flex:1; padding:2rem; overflow-y:auto;" id="cart-drawer-body">
+        <!-- Cart items injected via JS -->
+      </div>
+      <div style="padding:1.5rem 2rem; border-top:1px solid #E8E8E8; background:#FAFAFA;">
+        <div style="display:flex; justify-content:space-between; font-weight:500; margin-bottom:1rem;">
+          <span>Total</span>
+          <span id="cart-drawer-total">€0</span>
+        </div>
+        <button class="btn-primary" style="width:100%;" onclick="alert('Checkout simulated successfully!')">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast"></div>
+
+  <!-- ================= JS SCRIPT ================= -->
+  <script>
+    const PRODUCTS = [
+      { id: '1', name: 'Der Berliner Frühling', category: 'Signature Bouquets', price: 125, image: 'https://images.unsplash.com/photo-1563241527-3004b7be0ffd?q=80&w=800&auto=format&fit=crop' },
+      { id: '2', name: 'L\'Aube Blanche', category: 'Monochromatic', price: 140, image: 'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=800&auto=format&fit=crop' },
+      { id: '3', name: 'Jardin de Provence', category: 'Seasonal Atelier', price: 110, image: 'https://images.unsplash.com/photo-1561181286-d3fee7d55364?q=80&w=800&auto=format&fit=crop' },
+      { id: '4', name: 'Botanique Minimaliste', category: 'Vase Arrangements', price: 165, image: 'https://images.unsplash.com/photo-1508610048659-a06b669e3321?q=80&w=800&auto=format&fit=crop' }
+    ];
+
+    let cart = [];
+    let currentCat = 'All';
+
+    function showView(viewId) {
+      document.querySelectorAll('.page-view').forEach(el => el.classList.remove('active-view'));
+      document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+      document.getElementById('view-' + viewId).classList.add('active-view');
+      const navEl = document.getElementById('nav-' + viewId);
+      if (navEl) navEl.classList.add('active');
+      window.scrollTo(0, 0);
+    }
+
+    function renderShop() {
+      const grid = document.getElementById('standalone-product-grid');
+      const filtered = currentCat === 'All' ? PRODUCTS : PRODUCTS.filter(p => p.category === currentCat);
+      
+      grid.innerHTML = filtered.map(p => {
+        const badge = p.isBestSeller ? 'Best Seller' : p.isNew ? 'New Release' : null;
+        return `
+          <div class="product-card">
+            <div class="product-img-box">
+              <img src="${p.image}" alt="${p.name}" />
+              <div style="position:absolute; top:0.75rem; left:0.75rem; display:inline-flex; font-size:0.75rem; font-weight:500;">
+                <span style="background:rgba(255,255,255,0.92); color:var(--text-primary); padding:0.2rem 0.55rem; border-top-left-radius:9999px; border-bottom-left-radius:9999px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">€${p.price}</span>
+                ${badge ? `<span style="background:var(--accent-sage); color:#FFF; padding:0.2rem 0.55rem; border-top-right-radius:9999px; border-bottom-right-radius:9999px;">${badge}</span>` : ''}
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-header-row">
+                <h3 class="product-title">${p.name}</h3>
+                <span style="font-weight:600;">€${p.price}</span>
+              </div>
+              <p style="font-size:0.8rem; color:var(--text-secondary); margin-bottom:1rem;">${p.category}</p>
+              <button class="btn-primary" style="width:100%; padding:0.6rem;" onclick="addToBag('${p.id}')">Add to Bag</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function setCategoryFilter(cat, btn) {
+      currentCat = cat;
+      document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+      if(btn) btn.classList.add('active');
+      renderShop();
+    }
+
+    function filterShop(cat) {
+      showView('shop');
+      setCategoryFilter(cat);
+    }
+
+    function addToBag(id) {
+      const prod = PRODUCTS.find(p => p.id === id);
+      if(prod) {
+        cart.push(prod);
+        updateCartUI();
+        showToast(`Added "${prod.name}" to bag`);
+        toggleCart(true);
+      }
+    }
+
+    function updateCartUI() {
+      document.getElementById('cart-count-badge').innerText = cart.length;
+      const body = document.getElementById('cart-drawer-body');
+      const totalEl = document.getElementById('cart-drawer-total');
+
+      if (cart.length === 0) {
+        body.innerHTML = '<p style="text-align:center; color:var(--text-secondary); margin-top:2rem;">Your bag is currently empty.</p>';
+        totalEl.innerText = '€0';
+        return;
+      }
+
+      let total = 0;
+      body.innerHTML = cart.map((item, idx) => {
+        total += item.price;
+        return `
+          <div style="display:flex; gap:1rem; align-items:center; border-bottom:1px solid #E8E8E8; padding-bottom:1rem; margin-bottom:1rem;">
+            <img src="${item.image}" style="width:60px; height:60px; object-fit:cover; border-radius:4px;" />
+            <div style="flex:1;">
+              <div style="font-weight:500;">${item.name}</div>
+              <div style="font-size:0.8rem; color:var(--text-secondary);">€${item.price}</div>
+            </div>
+            <button onclick="removeFromBag(${idx})" style="color:var(--text-secondary); font-size:0.9rem;">✕</button>
+          </div>
+        `;
+      }).join('');
+
+      totalEl.innerText = `€${total}`;
+    }
+
+    function removeFromBag(index) {
+      cart.splice(index, 1);
+      updateCartUI();
+    }
+
+    function toggleCart(forceOpen) {
+      const drawer = document.getElementById('cart-drawer');
+      if(forceOpen) drawer.classList.add('active');
+      else drawer.classList.toggle('active');
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.innerText = msg;
+      t.style.display = 'block';
+      setTimeout(() => { t.style.display = 'none'; }, 3000);
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      showToast('Thank you. Inquiry sent to concierge.');
+      e.target.reset();
+    }
+
+    function openSearch() {
+      showToast('Type in the search field on the shop page.');
+      showView('shop');
+    }
+
+    // Initialize Particle Swarm for Standalone Hero Canvas
+    function initHeroGalaxyCanvas() {
+      const cvs = document.getElementById('hero-galaxy-canvas');
+      if(!cvs) return;
+      const ctx = cvs.getContext('2d');
+      let width = cvs.width = cvs.offsetWidth;
+      let height = cvs.height = cvs.offsetHeight;
+
+      window.addEventListener('resize', () => {
+        if(!cvs) return;
+        width = cvs.width = cvs.offsetWidth;
+        height = cvs.height = cvs.offsetHeight;
+      });
+
+      const numParticles = 1200;
+      const particles = [];
+      for(let i = 0; i < numParticles; i++) {
+        particles.push({
+          u: i / numParticles,
+          seed: Math.random() * 100
+        });
+      }
+
+      let time = 0;
+      function animate() {
+        time += 0.015;
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
+        ctx.fillRect(0, 0, width, height);
+
+        const cx = width / 2;
+        const cy = height / 2;
+        const scale = Math.min(width, height) * 0.32;
+
+        for(let i = 0; i < numParticles; i++) {
+          const p = particles[i];
+          const turns = 36.0;
+          const a = p.u * Math.PI * 2 * turns + time * 0.8;
+          const b = p.u * Math.PI * 2 * 5.0 - time * 0.45;
+
+          const ring = scale * (0.62 + 0.28 * Math.sin(b * 3.0 + time * 0.8));
+          const tube = scale * 0.22 * (1.0 + 0.6 * Math.sin(a * 2.0 - time * 1.5));
+
+          const ca = Math.cos(a), sa = Math.sin(a);
+          const cb = Math.cos(b), sb = Math.sin(b);
+
+          const x = (ring + tube * cb) * ca;
+          const y = (ring + tube * cb) * sa;
+
+          const h = (p.u * 360 + time * 20) % 360;
+          ctx.fillStyle = `hsl(${h}, 85%, 65%)`;
+          ctx.fillRect(cx + x, cy + y, 2.2, 2.2);
+        }
+        requestAnimationFrame(animate);
+      }
+      animate();
+    }
+
+    // Initialize
+    renderShop();
+    updateCartUI();
+    initHeroGalaxyCanvas();
+  </script>
+</body>
+</html>

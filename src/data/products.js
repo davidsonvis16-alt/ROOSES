@@ -1,23 +1,4 @@
-export interface Product {
-  id: string;
-  name: string;
-  category: string;
-  price: number;
-  rating: number;
-  reviewsCount: number;
-  stemCount: string;
-  image: string;
-  secondaryImage: string;
-  isBestSeller?: boolean;
-  isNew?: boolean;
-  description: string;
-  stemDetails: string[];
-  careInstructions: string[];
-  dimensions: string;
-  vesselOption: string;
-}
-
-export const PRODUCTS: Product[] = [
+export const PRODUCTS = [
   {
     id: "lbr-001",
     name: "Der Berliner Frühling",
@@ -158,8 +139,8 @@ export const PRODUCTS: Product[] = [
     rating: 4.9,
     reviewsCount: 19,
     stemCount: "15 Stems",
-    image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?q=80&w=1200&auto=format&fit=crop",
-    secondaryImage: "https://images.unsplash.com/photo-1591886960571-74d43a9d4166?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1591886960571-74d43a9d4166?q=80&w=1200&auto=format&fit=crop",
+    secondaryImage: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200&auto=format&fit=crop",
     isBestSeller: false,
     isNew: false,
     description: "A calming green architectural arrangement of fresh silver dollar eucalyptus, seeded eucalyptus, and pale green hydrangea heads.",

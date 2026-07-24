@@ -1,39 +1,9 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { Product } from '../data/products';
 
-export interface CartItem {
-  product: Product;
-  size: 'Classic' | 'Deluxe' | 'Grand';
-  vaseIncluded: boolean;
-  quantity: number;
-}
+const ShopContext = createContext(null);
 
-interface ShopContextType {
-  cartItems: CartItem[];
-  addToCart: (product: Product, size?: 'Classic' | 'Deluxe' | 'Grand', vaseIncluded?: boolean, quantity?: number) => void;
-  removeFromCart: (productId: string, size: string) => void;
-  updateQuantity: (productId: string, size: string, quantity: number) => void;
-  clearCart: () => void;
-  cartTotal: number;
-  cartCount: number;
-  giftNote: string;
-  setGiftNote: (note: string) => void;
-  deliveryDate: string;
-  setDeliveryDate: (date: string) => void;
-  isCartOpen: boolean;
-  setIsCartOpen: (open: boolean) => void;
-  quickViewProduct: Product | null;
-  setQuickViewProduct: (product: Product | null) => void;
-  isSearchOpen: boolean;
-  setIsSearchOpen: (open: boolean) => void;
-  toastMessage: string | null;
-  showToast: (msg: string) => void;
-}
-
-const ShopContext = createContext<ShopContextType | undefined>(undefined);
-
-export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [cartItems, setCartItems] = useState<CartItem[]>(() => {
+export const ShopProvider = ({ children }) => {
+  const [cartItems, setCartItems] = useState(() => {
     try {
       const saved = localStorage.getItem('liebe_roses_cart');
       return saved ? JSON.parse(saved) : [];
@@ -50,9 +20,17 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   });
 
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
+  const [quickViewProduct, setQuickViewProduct] = useState(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [toastMessage, setToastMessage] = useState(null);
+  const [wishlist, setWishlist] = useState(() => {
+    try {
+      const saved = localStorage.getItem('liebe_roses_wishlist');
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  });
 
   useEffect(() => {
     try {
@@ -62,19 +40,22 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   }, [cartItems]);
 
-  const showToast = (msg: string) => {
+  useEffect(() => {
+    try {
+      localStorage.setItem('liebe_roses_wishlist', JSON.stringify(wishlist));
+    } catch (e) {
+      console.error(e);
+    }
+  }, [wishlist]);
+
+  const showToast = (msg) => {
     setToastMessage(msg);
     setTimeout(() => {
       setToastMessage(null);
     }, 3500);
   };
 
-  const addToCart = (
-    product: Product,
-    size: 'Classic' | 'Deluxe' | 'Grand' = 'Classic',
-    vaseIncluded: boolean = false,
-    quantity: number = 1
-  ) => {
+  const addToCart = (product, size = 'Classic', vaseIncluded = false, quantity = 1) => {
     setCartItems((prev) => {
       const existingIndex = prev.findIndex(
         (item) => item.product.id === product.id && item.size === size && item.vaseIncluded === vaseIncluded
@@ -93,11 +74,11 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setIsCartOpen(true);
   };
 
-  const removeFromCart = (productId: string, size: string) => {
+  const removeFromCart = (productId, size) => {
     setCartItems((prev) => prev.filter((item) => !(item.product.id === productId && item.size === size)));
   };
 
-  const updateQuantity = (productId: string, size: string, quantity: number) => {
+  const updateQuantity = (productId, size, quantity) => {
     if (quantity <= 0) {
       removeFromCart(productId, size);
       return;
@@ -116,7 +97,24 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setCartItems([]);
   };
 
-  const getItemPrice = (item: CartItem) => {
+  const toggleWishlist = (product) => {
+    setWishlist((prev) => {
+      const exists = prev.find((item) => item.id === product.id);
+      if (exists) {
+        showToast(`Removed "${product.name}" from wishlist`);
+        return prev.filter((item) => item.id !== product.id);
+      } else {
+        showToast(`Added "${product.name}" to wishlist`);
+        return [...prev, product];
+      }
+    });
+  };
+
+  const isInWishlist = (productId) => {
+    return wishlist.some((item) => item.id === productId);
+  };
+
+  const getItemPrice = (item) => {
     let multiplier = 1;
     if (item.size === 'Deluxe') multiplier = 1.35;
     if (item.size === 'Grand') multiplier = 1.75;
@@ -150,6 +148,9 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setIsSearchOpen,
         toastMessage,
         showToast,
+        wishlist,
+        toggleWishlist,
+        isInWishlist,
       }}
     >
       {children}

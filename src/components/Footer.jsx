@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Instagram, Mail, Phone, MapPin, Check } from 'lucide-react';
+import { ArrowRight, Instagram, Mail, Phone, MapPin, Check, MessageSquare } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 
-export const Footer: React.FC = () => {
+export const Footer = () => {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
   const { showToast } = useShop();
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = (e) => {
     e.preventDefault();
     if (!email || !email.includes('@')) return;
     setSubscribed(true);
@@ -26,11 +26,14 @@ export const Footer: React.FC = () => {
               Liebe & Roses
             </Link>
             <p className="text-subhead" style={{ fontSize: '0.9rem', maxWidth: '320px', marginBottom: '1.5rem' }}>
-              Artisanal luxury floristry crafted with natural daylight stems, timeless Dutch craftsmanship, and sustainable European garden sourcing.
+              Artisanal luxury floristry crafted with natural daylight stems, timeless European craftsmanship, and sustainable garden sourcing.
             </p>
             <div style={{ display: 'flex', gap: '1rem' }}>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="Instagram">
                 <Instagram size={18} strokeWidth={1.5} />
+              </a>
+              <a href="https://wa.me/493089204110" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="WhatsApp">
+                <MessageSquare size={18} strokeWidth={1.5} />
               </a>
               <a href="mailto:concierge@liebeandroses.com" className="icon-btn" aria-label="Email">
                 <Mail size={18} strokeWidth={1.5} />
@@ -92,10 +95,10 @@ export const Footer: React.FC = () => {
         {/* Footer Bottom Bar */}
         <div className="footer-bottom">
           <div>
-            © {new Date().getFullYear()} LIEBE & ROSES FLORAL STUDIO GMBH. ALL RIGHTS RESERVED.
+            &copy; {new Date().getFullYear()} LIEBE & ROSES FLORAL STUDIO GMBH. ALL RIGHTS RESERVED.
           </div>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <span>Berlin • Paris</span>
+            <span>Berlin &bull; Paris</span>
             <span>|</span>
             <span>Designed by Eden</span>
           </div>
