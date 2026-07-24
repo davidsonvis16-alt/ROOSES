@@ -10,16 +10,16 @@ export const MobileBottomNav = () => {
     <nav style={{
       display: 'none',
       position: 'fixed',
-      bottom: 0,
+      top: 0,
       left: 0,
       width: '100%',
       backgroundColor: '#FFFFFF',
-      borderTop: '1px solid var(--border-light)',
+      borderBottom: '1px solid var(--border-light)',
       zIndex: 50,
     }}>
       <style>{`
         @media (max-width: 767px) {
-          nav[style*="position: fixed"][style*="bottom: 0"] { display: flex !important; }
+          nav[style*="position: fixed"][style*="top: 0"] { display: flex !important; }
           .mobile-bottom-nav-item { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; text-decoration: none; padding: 8px 0; }
         }
       `}</style>

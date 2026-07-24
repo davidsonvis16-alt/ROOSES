@@ -124,7 +124,7 @@ export default function App() {
     <ShopProvider>
       <HashRouter>
         <ScrollToTop />
-        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', paddingBottom: '64px' }}>
+        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', paddingTop: '64px' }}>
           <Header />
           <main style={{ flex: 1, position: 'relative' }}>
             <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
