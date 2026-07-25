@@ -129,7 +129,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               {/* Main Visual Image Container */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-[#FFFFFF] bg-[#FAF8F5] aspect-[4/5] group">
                 <img
-                  src="/src/assets/images/hero_flower_studio_1784989571325.jpg"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxAYk1Uh09GBPXrtzoEs1Gu4DKSdo0NrUA_D4j-DV6xg&s=10"
                   alt="Liebe & Roses Signature Flower Arrangement"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                   referrerPolicy="no-referrer"
