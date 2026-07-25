@@ -16,7 +16,7 @@ export const About = () => {
               Rooted in nature. Elevated by hand.
             </h1>
             <p className="text-subhead" style={{ fontSize: '1.2rem', lineHeight: 1.7 }}>
-              Liebe & Roses was born in Berlin from a simple desire: to honor the unadorned beauty of organic flora with architectural rigor, generous whitespace, and natural daylight care.
+              Liebe & Roses was born in Nairobi from a simple desire: to honor the unadorned beauty of organic flora with architectural rigor, generous whitespace, and natural daylight care.
             </p>
           </div>
         </Reveal>
@@ -46,7 +46,7 @@ export const About = () => {
               <span className="text-meta">01 • Direct Harvest</span>
               <h3 className="heading-sm" style={{ margin: '0.5rem 0 0.75rem' }}>Sustainable Sourcing</h3>
               <p className="text-subhead" style={{ fontSize: '0.925rem' }}>
-                We collaborate exclusively with small, family-operated European flower farms that practice pesticide-free organic cultivation. Stems are harvested at dawn to preserve full vitality.
+                We collaborate exclusively with small, family-operated Kenyan flower farms that practice pesticide-free organic cultivation. Stems are harvested at dawn to preserve full vitality.
               </p>
             </StaggerItem>
 
@@ -82,7 +82,7 @@ export const About = () => {
                 Natural daylight is our only studio lighting.
               </h2>
               <p className="text-subhead" style={{ marginBottom: '1.25rem' }}>
-                Artificial fluorescent bulbs distort flower colors and accelerate stem degradation. In our Berlin and Paris studios, every composition is created under high ceiling skylights in natural daylight.
+                Artificial fluorescent bulbs distort flower colors and accelerate stem degradation. In our Nairobi studios, every composition is created under high ceiling skylights in natural daylight.
               </p>
               <p style={{ fontSize: '0.925rem', color: 'var(--text-secondary)', lineHeight: 1.8, marginBottom: '2rem' }}>
                 This ensures that when your bouquet arrives at your residence or venue, its natural tonal subtleties—from soft blush creams to pale sage greens—look vibrant and true.
@@ -132,7 +132,7 @@ export const About = () => {
               "Flowers should feel like they were gathered during a quiet walk through an untouched garden—spontaneous, graceful, and full of life."
             </p>
             <span style={{ fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.12em', fontWeight: '600' }}>
-              — Elena von Berg, Founder & Creative Director
+              — ZURI, Founder & Creative Director
             </span>
           </motion.div>
         </Reveal>

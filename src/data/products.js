@@ -11,10 +11,10 @@ export const PRODUCTS = [
     
     isBestSeller: true,
     isNew: false,
-    description: "An evocative arrangement of blush French garden roses, coral garden peonies, and delicate wild ranunculus nestled amongst silver dollar eucalyptus.",
+    description: "An evocative arrangement of blush Nairobi garden roses, coral garden peonies, and delicate wild ranunculus nestled amongst silver dollar eucalyptus.",
     stemDetails: [
       "8x Heritage Coral Peonies",
-      "6x Blush French Garden Roses",
+      "6x Blush Nairobi Garden Roses",
       "5x White Clooney Ranunculus",
       "5x Fresh Italian Olive Sprigs"
     ],
@@ -35,7 +35,7 @@ export const PRODUCTS = [
     reviewsCount: 38,
     stemCount: "28 Stems",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXWI53sLWKEs1yE_ee9SfNdJr0mIPSoJ6KEDjU_pBvSw&s=10=crop",
-    secondaryImage: "https://images.unsplash.com/photo-1520763185298-1b434c919102?q=80&w=1200&auto=format&fit=crop",
+    
     isBestSeller: true,
     isNew: true,
     description: "A pure, sculptural monochromatic composition featuring pure white garden roses, ivory anemones, and white Dutch double tulips with architectural stems.",
@@ -65,7 +65,7 @@ export const PRODUCTS = [
     secondaryImage: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200&auto=format&fit=crop",
     isBestSeller: false,
     isNew: true,
-    description: "Inspired by late summer afternoons in Southern France. Features organic garden lavender, field chamomile, wild blue thistles, and pale lilacs.",
+    description: "Inspired by late summer afternoons in Southern Nakuru. Features organic garden lavender, field chamomile, wild blue thistles, and pale lilacs.",
     stemDetails: [
       "6x French Lavender Sprigs",
       "6x Chamomile Stems",
@@ -88,14 +88,14 @@ export const PRODUCTS = [
     rating: 4.9,
     reviewsCount: 51,
     stemCount: "18 Stems",
-    image: "https://images.unsplash.com/photo-1508610048659-a06b669e3321?q=80&w=1200&auto=format&fit=crop",
-    secondaryImage: "https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1200&auto=format&fit=crop",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzA1GBkSV5crh-QaXoZb-MYO8scLdVsyuKhJN4w9sD-Q&s=10",
+    
     isBestSeller: true,
     isNew: false,
     description: "Architectural minimalism in its purest form. Cream garden roses offset by long structural Italian olive branches in a handcrafted clear crystal cylinder.",
     stemDetails: [
-      "8x Cream Ecuadorian Roses",
-      "6x Long Italian Olive Stems",
+      "8x Cream Nairobi Roses",
+      "6x Long Nyeri Olive Stems",
       "4x Silver Dollar Eucalyptus"
     ],
     careInstructions: [
@@ -114,7 +114,7 @@ export const PRODUCTS = [
     reviewsCount: 24,
     stemCount: "26 Stems",
     image: "https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?q=80&w=1200&auto=format&fit=crop",
-    secondaryImage: "https://images.unsplash.com/photo-1567684014761-b65e2e59b9eb?q=80&w=1200&auto=format&fit=crop",
+    
     isBestSeller: false,
     isNew: true,
     description: "Rich textural layers of dusky buttercup ranunculus, apricot garden carnations, wild spray roses, and dried seed pods.",
@@ -140,7 +140,7 @@ export const PRODUCTS = [
     reviewsCount: 19,
     stemCount: "15 Stems",
     image: "https://images.unsplash.com/photo-1591886960571-74d43a9d4166?q=80&w=1200&auto=format&fit=crop",
-    secondaryImage: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200&auto=format&fit=crop",
+    
     isBestSeller: false,
     isNew: false,
     description: "A calming green architectural arrangement of fresh silver dollar eucalyptus, seeded eucalyptus, and pale green hydrangea heads.",
@@ -164,8 +164,8 @@ export const PRODUCTS = [
     rating: 4.8,
     reviewsCount: 33,
     stemCount: "16 Stems",
-    image: "https://images.unsplash.com/photo-1533616688419-b7a585564566?q=80&w=1200&auto=format&fit=crop",
-    secondaryImage: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200&auto=format&fit=crop",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqP4V0bfX574HBlj8KE7kWwqLGU6HRhgiUR3drynlg2w&s=10",
+    
     isBestSeller: true,
     isNew: false,
     description: "Carefully dried in our Embakasi atelier. Natural pampas grass, preserved white statice, dried lunaria, and bleached palm spears that last for years.",

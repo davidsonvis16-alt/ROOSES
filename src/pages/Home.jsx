@@ -105,7 +105,7 @@ export const Home = () => {
                 <h4 style={{ fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: '600', marginBottom: '0.5rem' }}>
                   Handcrafted Delivery
                 </h4>
-                <p style={{ fontSize: '0.825rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>Same-day courier service in Berlin & Paris</p>
+                <p style={{ fontSize: '0.825rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>Same-day courier service in Embakasi Nairobi</p>
               </StaggerItem>
             </div>
           </StaggerContainer>
@@ -239,7 +239,7 @@ export const Home = () => {
                   loading="lazy"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=800&auto=format&fit=crop"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQajNeR50hzAbGDWATPBiUJ37NrEQjX2KDet5j0u_JLZg&s=10"
                   alt="Botanical studio flowers"
                   className="story-img offset"
                   loading="lazy"
@@ -262,7 +262,7 @@ export const Home = () => {
                   At Liebe & Roses, we believe floristry is an intimate dialog between architectural balance and natural organic wildness.
                 </p>
                 <p style={{ fontSize: '0.925rem', color: 'var(--text-secondary)', lineHeight: 1.8, marginBottom: '2rem' }}>
-                  Founded in Berlin with ateliers now in Paris, our master floral architects reject synthetic dyes, artificial foams, and forced hot-house blooms. Every stem is hand-selected at dawn for stem density, petal bloom state, and fragrance profile.
+                  Founded in Nairobi, Embakasi, our master floral architects reject synthetic dyes, artificial foams, and forced hot-house blooms. Every stem is hand-selected at dawn for stem density, petal bloom state, and fragrance profile.
                 </p>
                 <Link to="/about" className="magnetic-btn btn-primary">
                   Read Full Story <ArrowRight size={16} />

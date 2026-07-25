@@ -16,7 +16,7 @@ export const Contact = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
-  const [activeLocation, setActiveLocation] = useState('berlin');
+  const [activeLocation, setActiveLocation] = useState('nairobi');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -163,34 +163,34 @@ export const Contact = () => {
               <div>
                 <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1.25rem' }}>
                   <button
-                    onClick={() => setActiveLocation('berlin')}
-                    className={`pill-btn ${activeLocation === 'berlin' ? 'active' : ''}`}
+                    onClick={() => setActiveLocation('embakasi')}
+                    className={`pill-btn ${activeLocation === 'embakasi' ? 'active' : ''}`}
                   >
-                    Berlin Flagship
+                    Embakasi Flagship
                   </button>
                   <button
-                    onClick={() => setActiveLocation('paris')}
-                    className={`pill-btn ${activeLocation === 'paris' ? 'active' : ''}`}
+                    onClick={() => setActiveLocation('embakasi')}
+                    className={`pill-btn ${activeLocation === 'embakasi' ? 'active' : ''}`}
                   >
-                    Paris Atelier
+                    Embakasi Atelier
                   </button>
                 </div>
 
-                {activeLocation === 'berlin' ? (
+                {activeLocation === 'Embakasi' ? (
                   <div style={{ padding: '1.5rem', border: '1px solid var(--border-light)', borderRadius: 'var(--radius-sm)' }}>
-                    <h4 className="heading-sm" style={{ marginBottom: '1rem' }}>Berlin Flagship Studio</h4>
+                    <h4 className="heading-sm" style={{ marginBottom: '1rem' }}>EMBAKASI Flagship Studio</h4>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
                       <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                         <MapPin size={18} style={{ color: 'var(--accent-sage)', marginTop: '0.2rem', flexShrink: 0 }} />
-                        <div>Auguststraße 42, 10115 Berlin, Germany</div>
+                        <div>Embakasi Road, Next to QuickMart, Nairobi</div>
                       </div>
                       <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
                         <Phone size={18} style={{ color: 'var(--accent-sage)', flexShrink: 0 }} />
-                        <div>+49 30 8920 4110</div>
+                        <div>+254717315599</div>
                       </div>
                       <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
                         <Mail size={18} style={{ color: 'var(--accent-sage)', flexShrink: 0 }} />
-                        <div>berlin@liebeandroses.com</div>
+                        <div>Emba.@liebeandroses.com</div>
                       </div>
                       <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                         <Clock size={18} style={{ color: 'var(--accent-sage)', marginTop: '0.2rem', flexShrink: 0 }} />
@@ -200,19 +200,19 @@ export const Contact = () => {
                   </div>
                 ) : (
                   <div style={{ padding: '1.5rem', border: '1px solid var(--border-light)', borderRadius: 'var(--radius-sm)' }}>
-                    <h4 className="heading-sm" style={{ marginBottom: '1rem' }}>Paris Atelier</h4>
+                    <h4 className="heading-sm" style={{ marginBottom: '1rem' }}>Embakasi Atelier</h4>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
                       <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                         <MapPin size={18} style={{ color: 'var(--accent-sage)', marginTop: '0.2rem', flexShrink: 0 }} />
-                        <div>18 Rue Vieille du Temple, 75004 Paris, France</div>
+                        <div>Embakasi Road, Next to QuickMart, Nairobi</div>
                       </div>
                       <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
                         <Phone size={18} style={{ color: 'var(--accent-sage)', flexShrink: 0 }} />
-                        <div>+33 1 42 68 90 20</div>
+                        <div>+254726201738</div>
                       </div>
                       <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
                         <Mail size={18} style={{ color: 'var(--accent-sage)', flexShrink: 0 }} />
-                        <div>paris@liebeandroses.com</div>
+                        <div>zuripetals@gmail.com</div>
                       </div>
                       <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                         <Clock size={18} style={{ color: 'var(--accent-sage)', marginTop: '0.2rem', flexShrink: 0 }} />
@@ -226,7 +226,7 @@ export const Contact = () => {
               {/* Quick Action Buttons (WhatsApp & Concierge) */}
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 <motion.a
-                  href="https://wa.me/493089204110"
+                  href="https://wa.me/254717315599"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="magnetic-btn btn-secondary"
@@ -238,7 +238,7 @@ export const Contact = () => {
                   <MessageSquare size={16} /> WhatsApp Direct
                 </motion.a>
                 <motion.a
-                  href="mailto:concierge@liebeandroses.com"
+                  href="mailto:zuripetals@gmail.com"
                   className="magnetic-btn btn-secondary"
                   style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.9rem' }}
                   whileHover={{ scale: 1.03 }}
@@ -252,7 +252,7 @@ export const Contact = () => {
               {/* Map Placeholder */}
               <div style={{ border: '1px solid var(--border-light)', borderRadius: 'var(--radius-sm)', overflow: 'hidden', backgroundColor: 'var(--bg-secondary)', position: 'relative' }}>
                 <div style={{ padding: '0.75rem 1rem', backgroundColor: '#FFFFFF', borderBottom: '1px solid var(--border-light)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span className="text-meta" style={{ fontSize: '0.75rem' }}>Map Location • {activeLocation === 'berlin' ? 'Berlin Mitte' : 'Le Marais, Paris'}</span>
+                  <span className="text-meta" style={{ fontSize: '0.75rem' }}>Map Location • {activeLocation === 'berlin' ? 'Kenyan Mitte' : 'Le Marais,Kenya'}</span>
                   <span className="badge-sage">Studio Open</span>
                 </div>
                 <div
@@ -274,7 +274,7 @@ export const Contact = () => {
                   </div>
                   <div style={{ fontWeight: '500', fontSize: '0.95rem' }}>LIEBE & ROSES {activeLocation.toUpperCase()}</div>
                   <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
-                    {activeLocation === 'berlin' ? 'Auguststraße 42, 10115 Berlin' : '18 Rue Vieille du Temple, 75004 Paris'}
+                    {activeLocation === 'embakasi' ? 'Nairobi, Embakasi' : 'Nairobi, Embakasi'}
                   </p>
                 </div>
               </div>
