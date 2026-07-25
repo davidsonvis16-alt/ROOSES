@@ -35,7 +35,7 @@ export const Home = () => {
             >
               <Reveal delay={0.15}>
                 <span className="badge-sage" style={{ marginBottom: '1.5rem', display: 'inline-block' }}>
-                  Atelier Floristry • Berlin & Paris
+                  Atelier Floristry • Nairobi
                 </span>
               </Reveal>
               <Reveal delay={0.25}>

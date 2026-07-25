@@ -26,7 +26,7 @@ export const Footer = () => {
               Liebe & Roses
             </Link>
             <p className="text-subhead" style={{ fontSize: '0.9rem', maxWidth: '320px', marginBottom: '1.5rem' }}>
-              Artisanal luxury floristry crafted with natural daylight stems, timeless European craftsmanship, and sustainable garden sourcing.
+              Artisanal luxury floristry crafted with natural daylight stems, timeless craftsmanship, and sustainable garden sourcing.
             </p>
             <div style={{ display: 'flex', gap: '1rem' }}>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="Instagram">
@@ -95,12 +95,17 @@ export const Footer = () => {
         {/* Footer Bottom Bar */}
         <div className="footer-bottom">
           <div>
-            &copy; {new Date().getFullYear()} LIEBE & ROSES FLORAL STUDIO GMBH. ALL RIGHTS RESERVED.
+            &copy; {new Date().getFullYear()} LIEBE & ROSES FLORAL STUDIO. ALL RIGHTS RESERVED.
           </div>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <span>Berlin &bull; Paris</span>
+            <span>Embakasi &bull; Nairobi</span>
             <span>|</span>
-            <span>Designed by Eden</span>
+            <span>
+              Designed by{' '}
+              <a href="tel:0142624743" className="footer-link" style={{ textDecoration: 'underline' }}>
+                Eden
+              </a>
+            </span>
           </div>
         </div>
       </div>

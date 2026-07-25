@@ -34,8 +34,8 @@ export const PRODUCTS = [
     rating: 5.0,
     reviewsCount: 38,
     stemCount: "28 Stems",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjMQp_AmdyGeB_zMolcFHaDR9WvF8kp5jbnINPRGVjRw&s=10",
-    
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXWI53sLWKEs1yE_ee9SfNdJr0mIPSoJ6KEDjU_pBvSw&s=10=crop",
+    secondaryImage: "https://images.unsplash.com/photo-1520763185298-1b434c919102?q=80&w=1200&auto=format&fit=crop",
     isBestSeller: true,
     isNew: true,
     description: "A pure, sculptural monochromatic composition featuring pure white garden roses, ivory anemones, and white Dutch double tulips with architectural stems.",
@@ -61,8 +61,8 @@ export const PRODUCTS = [
     rating: 4.8,
     reviewsCount: 29,
     stemCount: "22 Stems",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjQNYVtdphNMG3gNO5yBKbtPqq3_QwbMIkG8kKQAbYsg&s=10",
-    
+    image: "https://images.unsplash.com/photo-1561181286-d3fee7d55364?q=80&w=1200&auto=format&fit=crop",
+    secondaryImage: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200&auto=format&fit=crop",
     isBestSeller: false,
     isNew: true,
     description: "Inspired by late summer afternoons in Southern France. Features organic garden lavender, field chamomile, wild blue thistles, and pale lilacs.",
@@ -88,8 +88,8 @@ export const PRODUCTS = [
     rating: 4.9,
     reviewsCount: 51,
     stemCount: "18 Stems",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgYeoCbT-cpfzzdAXBVCU1Ticz80ucScRYNZZAwkD_eA&s=10",
-    
+    image: "https://images.unsplash.com/photo-1508610048659-a06b669e3321?q=80&w=1200&auto=format&fit=crop",
+    secondaryImage: "https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1200&auto=format&fit=crop",
     isBestSeller: true,
     isNew: false,
     description: "Architectural minimalism in its purest form. Cream garden roses offset by long structural Italian olive branches in a handcrafted clear crystal cylinder.",
@@ -168,7 +168,7 @@ export const PRODUCTS = [
     secondaryImage: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200&auto=format&fit=crop",
     isBestSeller: true,
     isNew: false,
-    description: "Carefully dried in our Berlin atelier. Natural pampas grass, preserved white statice, dried lunaria, and bleached palm spears that last for years.",
+    description: "Carefully dried in our Embakasi atelier. Natural pampas grass, preserved white statice, dried lunaria, and bleached palm spears that last for years.",
     stemDetails: [
       "4x Natural Plume Pampas",
       "4x Preserved White Statice",
@@ -222,7 +222,7 @@ export const INSTAGRAM_PHOTOS = [
   {
     id: "insta-1",
     url: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=800&auto=format&fit=crop",
-    title: "Morning light in the Berlin Atelier",
+    title: "Morning light in the Embakasi Atelier",
     likes: "1,240"
   },
   {
@@ -234,7 +234,7 @@ export const INSTAGRAM_PHOTOS = [
   {
     id: "insta-3",
     url: "https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?q=80&w=800&auto=format&fit=crop",
-    title: "Bespoke wedding installation in Paris",
+    title: "Bespoke wedding installation in Nairobi",
     likes: "3,150"
   },
   {
