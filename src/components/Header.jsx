@@ -3,6 +3,7 @@ import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Search, ShoppingBag, Menu, X, Heart } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useShop } from '../context/ShopContext';
+import logo from '../assets/logo.png';
 
 export const Header = () => {
   const { cartCount, setIsCartOpen, setIsSearchOpen, wishlist } = useShop();
@@ -36,7 +37,8 @@ export const Header = () => {
         <div className="header-inner">
           {/* Brand Logo */}
           <Link to="/" className="brand-logo" onClick={closeMobile}>
-            Liebe & Roses
+            <img src={logo} alt="Liebe & Roses logo" className="brand-logo-img" />
+            <span className="brand-logo-text">Liebe & Roses</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -61,7 +61,7 @@ export const ProductCard = ({ product }) => {
                 backdropFilter: 'blur(4px)',
               }}
             >
-              €{product.price}
+              KSh{product.price}
             </span>
             {badgeText && (
               <span
@@ -126,7 +126,7 @@ export const ProductCard = ({ product }) => {
       <div className="product-info" style={{ position: 'relative', zIndex: 1 }}>
         <div className="product-header-row">
           <h3 className="product-title">{product.name}</h3>
-          <span className="product-price">€{product.price}</span>
+          <span className="product-price">KSh{product.price}</span>
         </div>
         <p className="product-stem-note">{product.stemCount} • {product.category}</p>
 

@@ -90,7 +90,7 @@ export const QuickViewModal = () => {
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.5rem' }}>
                   <span className="text-meta">{quickViewProduct.category}</span>
-                  <span className="font-serif" style={{ fontSize: '1.5rem', fontWeight: '500' }}>€{getPrice()}</span>
+                  <span className="font-serif" style={{ fontSize: '1.5rem', fontWeight: '500' }}>KSh{getPrice()}</span>
                 </div>
 
                 <h2 className="heading-md" style={{ marginBottom: '0.5rem' }}>{quickViewProduct.name}</h2>
@@ -141,7 +141,7 @@ export const QuickViewModal = () => {
                     style={{ cursor: 'pointer', width: '18px', height: '18px', accentColor: 'var(--accent-sage)' }}
                   />
                   <div style={{ flex: 1 }}>
-                    <div style={{ fontSize: '0.85rem', fontWeight: '500' }}>Add Smoked Fluted Glass Vase (+€35)</div>
+                    <div style={{ fontSize: '0.85rem', fontWeight: '500' }}>Add Smoked Fluted Glass Vase (+KSh700)</div>
                     <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>Specially selected to complement stem proportions</div>
                   </div>
                 </div>
@@ -182,12 +182,12 @@ export const QuickViewModal = () => {
                   </div>
 
                   <button className="btn-primary" style={{ flex: 1, padding: '0.9rem 1.5rem' }} onClick={handleAdd}>
-                    Add to Bag • €{getPrice()}
+                    Add to Bag • KSh{getPrice()}
                   </button>
                 </div>
 
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}><Truck size={14} /> Same-day delivery in Berlin & Paris</span>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}><Truck size={14} /> Same-day delivery in Nairobi,Embakasi</span>
                   <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}><ShieldCheck size={14} /> 7-Day Freshness Guarantee</span>
                 </div>
               </div>

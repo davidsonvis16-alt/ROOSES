@@ -117,7 +117,7 @@ export const SearchModal = () => {
                       <div style={{ fontSize: '0.95rem', fontWeight: '500' }}>{product.name}</div>
                       <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>{product.category} • {product.stemCount}</div>
                     </div>
-                    <div style={{ fontWeight: '500', fontSize: '0.95rem' }}>€{product.price}</div>
+                    <div style={{ fontWeight: '500', fontSize: '0.95rem' }}>KSh{product.price}</div>
                   </div>
                 ))
               )}

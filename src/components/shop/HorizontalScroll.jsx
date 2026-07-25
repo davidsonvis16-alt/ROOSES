@@ -155,7 +155,7 @@ export const HorizontalScroll = ({ title, products, onAddToCart, onQuickView }) 
                     <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.1rem', fontWeight: 400, lineHeight: 1.3 }}>{product.name}</h4>
                     <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>{product.stemCount} • {product.category}</p>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.75rem', gap: '0.75rem' }}>
-                      <span style={{ fontWeight: 500, fontSize: '1rem' }}>€{product.price}</span>
+                      <span style={{ fontWeight: 500, fontSize: '1rem' }}>KSh{product.price}</span>
                       <motion.button
                         className="magnetic-btn btn-primary"
                         style={{ padding: '0.5rem 1rem', fontSize: '0.7rem', whiteSpace: 'nowrap' }}

@@ -107,7 +107,7 @@ export const CartDrawer = () => {
                 <div style={{ padding: '1rem 2rem', backgroundColor: 'var(--bg-warm)', borderBottom: '1px solid var(--border-light)' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', fontWeight: '500', marginBottom: '0.5rem' }}>
                     <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}><Truck size={14} /> Complimentary Hand Delivery</span>
-                    <span>{cartTotal >= freeDeliveryThreshold ? 'Unlocked!' : `Add €${amountNeededForFreeDelivery} more`}</span>
+                    <span>{cartTotal >= freeDeliveryThreshold ? 'Unlocked!' : `Add KSh${amountNeededForFreeDelivery} more`}</span>
                   </div>
                   <div style={{ width: '100%', height: '4px', backgroundColor: '#E0DDD5', borderRadius: '2px', overflow: 'hidden' }}>
                     <div style={{ width: `${freeDeliveryProgress}%`, height: '100%', backgroundColor: 'var(--accent-sage)', transition: 'width 0.4s ease' }} />
@@ -151,7 +151,7 @@ export const CartDrawer = () => {
                             </div>
                           </div>
                           <div style={{ textAlign: 'right' }}>
-                            <div style={{ fontWeight: '500', fontSize: '0.95rem' }}>€{getItemPrice(item)}</div>
+                            <div style={{ fontWeight: '500', fontSize: '0.95rem' }}>KSh{getItemPrice(item)}</div>
                             <button
                               onClick={() => removeFromCart(item.product.id, item.size)}
                               style={{ color: 'var(--text-secondary)', marginTop: '0.5rem' }}
@@ -200,11 +200,11 @@ export const CartDrawer = () => {
                   <div className="drawer-footer">
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
                       <span>Subtotal</span>
-                      <span>€{cartTotal}</span>
+                      <span>KSh{cartTotal}</span>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1.25rem', fontSize: '1.1rem', fontWeight: '500', color: 'var(--text-primary)' }}>
                       <span>Total</span>
-                      <span>€{cartTotal}</span>
+                      <span>KSh{cartTotal}</span>
                     </div>
                     <button className="btn-primary" style={{ width: '100%' }} onClick={handleCheckout}>
                       Proceed to Bespoke Checkout <ArrowRight size={16} />
