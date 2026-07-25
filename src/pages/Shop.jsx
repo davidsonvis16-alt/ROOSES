@@ -52,7 +52,7 @@ export const Shop = () => {
               Artisanal Floral Creations
             </h1>
             <p className="text-subhead">
-              Hand-arranged daily using the finest European garden stems. Each creation arrives in our signature eco-luxury packaging with custom stem conditioning notes.
+              Hand-arranged daily using the finest Kenyan garden stems. Each creation arrives in our signature eco-luxury packaging with custom stem conditioning notes.
             </p>
           </div>
         </Reveal>

@@ -45,7 +45,7 @@ export const Home = () => {
               </Reveal>
               <Reveal delay={0.35}>
                 <p className="text-subhead" style={{ marginBottom: '2.5rem', maxWidth: '480px' }}>
-                  Liebe & Roses creates bespoke floral arrangements using fresh garden blooms sourced directly from sustainable European growers, conditioned in natural daylight.
+                  Liebe & Roses creates bespoke floral arrangements using fresh garden blooms sourced directly from sustainable Kenyan growers, conditioned in natural daylight.
                 </p>
               </Reveal>
               <Reveal delay={0.45}>
