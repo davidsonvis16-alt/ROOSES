@@ -252,7 +252,7 @@ export const Contact = () => {
               {/* Map Placeholder */}
               <div style={{ border: '1px solid var(--border-light)', borderRadius: 'var(--radius-sm)', overflow: 'hidden', backgroundColor: 'var(--bg-secondary)', position: 'relative' }}>
                 <div style={{ padding: '0.75rem 1rem', backgroundColor: '#FFFFFF', borderBottom: '1px solid var(--border-light)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span className="text-meta" style={{ fontSize: '0.75rem' }}>Map Location • {activeLocation === 'berlin' ? 'Kenyan Mitte' : 'Le Marais,Kenya'}</span>
+                  <span className="text-meta" style={{ fontSize: '0.75rem' }}>Map Location • {activeLocation === 'berlin' ? 'Kenyan Flowers' : 'Nairobi, Kenya'}</span>
                   <span className="badge-sage">Studio Open</span>
                 </div>
                 <div
