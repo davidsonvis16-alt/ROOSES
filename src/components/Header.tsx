@@ -34,13 +34,7 @@ export const Header: React.FC<HeaderProps> = ({
         </span>
         <span className="hidden md:inline-block text-[#A39E93]">•</span>
         <span className="hidden md:inline-block text-[#E5D2C2]">Order before 3 PM for today's delivery</span>
-        <button
-          onClick={onOpenAiConcierge}
-          className="ml-3 hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#8C2D38] text-white hover:bg-[#A33845] transition-colors text-[11px] font-semibold"
-        >
-          <Sparkles className="w-3 h-3 text-[#FDE68A]" />
-          Ask AI Concierge
-        </button>
+       
       </div>
 
       {/* Main Glass Navigation Bar */}
