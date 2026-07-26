@@ -178,16 +178,7 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
 
           <div className="pt-2 space-y-2">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenAiConcierge();
-              }}
-              className="w-full py-2.5 rounded-xl bg-[#F5F2EC] text-[#8C2D38] font-medium text-xs flex items-center justify-center gap-2 border border-[#E7E2D8]"
-            >
-              <Sparkles className="w-4 h-4 text-[#8C2D38]" />
-              Ask AI Flower Concierge
-            </button>
+            
 
             <div className="text-xs text-[#78716C] pt-2 flex items-center gap-1">
               <MapPin className="w-3.5 h-3.5 text-[#8C2D38]" />
