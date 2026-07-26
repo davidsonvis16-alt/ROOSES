@@ -10,7 +10,7 @@ import { TestimonialsSection } from './components/TestimonialsSection';
 import { AboutStudioSection } from './components/AboutStudioSection';
 import { FooterSection } from './components/FooterSection';
 import { FeaturedArrangementsModal } from './components/FeaturedArrangementsModal';
-import { AiFlowerConcierge } from './components/AiFlowerConcierge';
+
 import { CartDrawer } from './components/CartDrawer';
 import { FloatingWhatsAppBar } from './components/FloatingWhatsAppBar';
 import { Arrangement, GiftAddon, CartItem } from './types';
@@ -110,11 +110,8 @@ export default function App() {
         onAddToCart={(arr, addons, sz) => handleAddToCart(arr, addons, sz)}
       />
 
-      {/* AI Concierge Modal */}
-      <AiFlowerConcierge
-        isOpen={isAiConciergeOpen}
-        onClose={() => setIsAiConciergeOpen(false)}
-      />
+      
+    
 
       {/* Cart Drawer */}
       <CartDrawer
