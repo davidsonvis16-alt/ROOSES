@@ -77,14 +77,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 <span>Explore Bouquets</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
-
-              <button
-                onClick={onOpenAiConcierge}
-                className="inline-flex items-center justify-center gap-2 px-5 py-4 rounded-full bg-[#F5F2EC] text-[#8C2D38] hover:bg-[#EBE5DA] font-semibold text-xs border border-[#E7E2D8] transition-all"
-              >
-                <Sparkles className="w-4 h-4 text-[#8C2D38]" />
-                <span>AI Concierge</span>
-              </button>
             </div>
 
             {/* Trust Markers Bar */}

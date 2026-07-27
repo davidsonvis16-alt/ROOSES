@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageCircle, X, Sparkles, MapPin } from 'lucide-react';
+import { MessageCircle, X } from 'lucide-react';
 import { WHATSAPP_NUMBER } from '../data/flowerData';
 
 export const FloatingWhatsAppBar: React.FC = () => {
@@ -19,15 +19,15 @@ export const FloatingWhatsAppBar: React.FC = () => {
         className="fixed bottom-6 right-6 z-40 p-4 rounded-full bg-[#25D366] text-white shadow-2xl hover:scale-105 transition-transform flex items-center justify-center"
         aria-label="Open WhatsApp Chat"
       >
-        <MessageCircle className="w-6 h-6 fill-current" />
+        <MessageCircle className="w-6 h-6" />
       </button>
     );
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-40 max-w-xs w-full animate-in slide-in-from-bottom duration-300">
+    <div className="fixed bottom-6 right-6 z-40 max-w-xs w-full transition-all duration-300">
       <div className="glass-dark text-white p-4 rounded-2xl border border-white/10 shadow-2xl space-y-3 relative">
-        
+
         {/* Minimize Button */}
         <button
           onClick={() => setMinimized(true)}
@@ -53,7 +53,7 @@ export const FloatingWhatsAppBar: React.FC = () => {
           onClick={handleWhatsAppClick}
           className="w-full py-2.5 px-4 rounded-xl bg-[#25D366] text-white font-bold text-xs hover:bg-[#20bd5a] transition-all flex items-center justify-center gap-2 shadow-md"
         >
-          <MessageCircle className="w-4 h-4 fill-current" />
+          <MessageCircle className="w-4 h-4" />
           <span>Chat on WhatsApp Direct</span>
         </button>
       </div>

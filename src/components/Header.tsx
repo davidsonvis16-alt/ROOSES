@@ -81,13 +81,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Header Action Buttons */}
           <div className="flex items-center gap-2 sm:gap-3">
             {/* AI Assistant Button */}
-            <button
-              onClick={onOpenAiConcierge}
-              className="sm:hidden p-2 rounded-full bg-[#F5F2EC] text-[#8C2D38] hover:bg-[#EBE5DA] transition-colors"
-              title="AI Flower Assistant"
-            >
-              <Sparkles className="w-4 h-4" />
-            </button>
+           
 
             {/* Custom Order Trigger */}
             <button

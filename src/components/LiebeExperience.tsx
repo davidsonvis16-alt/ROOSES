@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Droplets, Sparkles, Award, MapPin } from 'lucide-react';
+import { Heart, Droplets, Award, MapPin } from 'lucide-react';
 
 export const LiebeExperience: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ export const LiebeExperience: React.FC = () => {
           
           <div className="lg:col-span-6 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#8C2D38]/40 border border-[#8C2D38] text-xs text-[#FDE68A]">
-              <Sparkles className="w-3.5 h-3.5" />
+              
               <span>The Liebe Experience</span>
             </div>
 
@@ -86,7 +86,7 @@ export const LiebeExperience: React.FC = () => {
             {/* Feature Card 4: White-Glove Courier */}
             <div className="p-6 rounded-3xl bg-[#2A2624] border border-[#3E3835] space-y-3 hover:border-[#2E4839] transition-all group">
               <div className="w-10 h-10 rounded-2xl bg-[#2E4839]/40 flex items-center justify-center text-[#A7F3D0] group-hover:scale-110 transition-transform">
-                <Sparkles className="w-5 h-5" />
+                
               </div>
               <h3 className="font-serif text-xl font-bold text-[#FAF8F5]">Discreet Same-Day Delivery</h3>
               <p className="text-xs text-[#A8A29E] leading-relaxed">

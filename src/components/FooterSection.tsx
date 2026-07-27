@@ -105,11 +105,7 @@ export const FooterSection: React.FC<FooterSectionProps> = ({
                   Delivery Zones & Rates
                 </a>
               </li>
-              <li>
-                <button onClick={onOpenAiConcierge} className="hover:text-white transition-colors text-left">
-                  AI Flower Concierge
-                </button>
-              </li>
+              
             </ul>
           </div>
 
